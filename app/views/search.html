@@ -1,0 +1,38 @@
+
+<head>
+<script src="../viewmodels/shell.js"></script>
+</head>
+<section>
+	<div style="float:left" id="welcomeInfo">
+		<h1>Search Results</h1>
+		<ul>
+			<script>
+				var url = window.location.href;
+				url = url.split("$")[1];//Grab what's after the $
+				
+				if(url){
+					var hits = searchFcn(url);
+					for(i = 0;i<hits.length;i++){
+						document.write("<li><div class="container">"+hits[i]+"</div></li>");
+					}
+				}
+			</script>
+		</ul>
+	</div>
+	
+	<div id="login" style="float:right">
+	        <form>
+	    
+	            <button id="signupBtn" type="button" class="btn btn-success">Sign up!</button>
+	            <input type="text" name="firstName" placeholder="first name" class="register"></input>
+	            <input type="text" name = "lastName" placeholder="last name" class="register"></input>
+	            <input type="text" name="email" placeholder="email address" class="register"></input>
+	            <input type="text" name="username" id="username" placeholder="username or email" class="login"></input>
+	            <input type="password" name = "password" id="password" placeholder="password" class="login"></input>
+	            <input type="password" name = "confirmPassword" placeholder="confirm password" class="register"></input>
+	            <input type="button" value="Login" id="confirmBtn" class=".btn-default"></input>
+	            <p id="loginFailureNotice">Login failed!</p>
+	
+	        </form>
+	    </div>
+</section>

@@ -1,0 +1,31 @@
+
+<head>
+<script src="../viewmodels/shell.js"></script>
+</head>
+<section>
+		<h1>Search Results For: <span data-bind="text: searchingFor"> </span></h1>
+	
+    <table class="table table-striped">
+      <tbody>
+    <!-- ko foreach: hits -->
+				<tr>
+				<th scope="row">
+                 <div class="paragraphs">
+                   <div class="row">
+                     <div class="span4">
+                       <div class="clearfix content-heading">
+                 			<a data-bind="attr: { 'href': $data.link }"><img class="pull-left" data-bind="attr:{'src': $data.img}" style="width:20%;"></a>
+                 			<h2>&nbsp;<span data-bind="text:$data.name"></span></h2>
+                 			<h3>&nbsp;<i><span data-bind="text:$data.desc"></span></i></h3>
+                 			<h3>&nbsp;Time to play: <span data-bind="text:$data.time"></span></h3>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+				</th>
+				</tr>
+    <!-- /ko -->
+      </tbody>
+    </table>
+
+</section>

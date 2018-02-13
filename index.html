@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tablemania</title>
+        
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="format-detection" content="telephone=no"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <link rel="apple-touch-startup-image" href="lib/durandal/img/ios-startup-image-landscape.png" media="(orientation:landscape)" />
+        <link rel="apple-touch-startup-image" href="lib/durandal/img/ios-startup-image-portrait.png" media="(orientation:portrait)" />
+        <link rel="apple-touch-icon" href="lib/durandal/img/icon.png"/>
+        
+        <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/ie10mobile.css" />
+        <link rel="stylesheet" href="lib/durandal/css/durandal.css" />
+        <link rel="stylesheet" href="css/starterkit.css" />
+        <link rel="stylesheet" href="css/login.css">
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script>
+
+                    var registerMode = false;
+                    setTimeout(
+  function() 
+  {
+   $(".register").css("visibility", "hidden");
+        $(".register").hide();
+        $("#loginFailureNotice").hide();
+
+        $("#signupBtn").click(function(){
+                $("#loginFailureNotice").hide();
+            $("#signupBtn").prop("disabled", true);
+            $("#confirmBtn").attr({value: "Sign up"});
+            $("#confirmBtn").animate({top: "+195px"});
+            $(".panel-body").animate({height: "+465px"});
+            $("#username").attr("placeholder", "username");
+            $(".login").animate({top: "+146px"}, showRegisterFields);
+            $(".login").animate({top: "+0px"}, 0);
+            $("#confirmBtn").animate({top: "+0px"}, 0);
+            registerMode = true;
+        });
+    
+        $("#confirmBtn").click(function(){
+                $("#loginFailureNotice").hide();
+          if(registerMode == false) {
+            if($("#username").val() == "admin" && $("#password").val() == "password") {
+              window.location.href = "#Categories/multiplayer";
+            //alert("login successful");
+            } else {
+              //show "login failed" message
+              //alert("login failed");
+              $("#loginFailureNotice").html('<span class="label label-danger">Login Failed!</span>');
+              $("#loginFailureNotice").show();
+            }  
+          }
+          else
+          {
+                  if( $("#confirmPassword").val().localeCompare("") != 0 && $("#password").val().localeCompare("") != 0 && $("#username").val().localeCompare("") != 0 && $("#email").val().localeCompare("") != 0 && $("#firstName").val().localeCompare("") != 0 && $("#lastName").val().localeCompare("") != 0) {
+                  if($("#confirmPassword").val().localeCompare($("#password").val()) == 0){
+                          
+                        window.location.href = "#Categories/multiplayer";
+                } else {$("#loginFailureNotice").html('<span class="label label-danger">Passwords dont match; try again!</span>'); $("#loginFailureNotice").show(); }
+        } else {
+$("#loginFailureNotice").html('<span class="label label-danger">All information must be entered!</span>'); $("#loginFailureNotice").show();
+                
+        }
+          }
+        });
+
+        $(document).keypress(function(e) {
+                if(e.which == 13) {
+$("#loginFailureNotice").hide();
+          if(registerMode == false) {
+            if($("#username").val() == "admin" && $("#password").val() == "password") {
+              window.location.href = "#Categories/multiplayer";
+            //alert("login successful");
+            } else {
+              //show "login failed" message
+              //alert("login failed");
+              $("#loginFailureNotice").html('<span class="label label-danger">Login Failed!</span>');
+              $("#loginFailureNotice").show();
+            }  
+          }
+          else
+          {
+                  if( $("#confirmPassword").val().localeCompare("") != 0 && $("#password").val().localeCompare("") != 0 && $("#username").val().localeCompare("") != 0 && $("#email").val().localeCompare("") != 0 && $("#firstName").val().localeCompare("") != 0 && $("#lastName").val().localeCompare("") != 0) {
+                  if($("#confirmPassword").val().localeCompare($("#password").val()) == 0){
+                          
+                        window.location.href = "#Categories/multiplayer";
+                } else {$("#loginFailureNotice").html('<span class="label label-danger">Passwords dont match; try again!</span>'); $("#loginFailureNotice").show(); }
+        } else {
+$("#loginFailureNotice").html('<span class="label label-danger">All information must be entered!</span>'); $("#loginFailureNotice").show();
+                
+        }
+          }
+                }
+});
+
+        $("#backToLoginBtn").click(function(){
+                $("#loginFailureNotice").hide();
+            $(".register").fadeOut(400, hideRegisterFields);
+            $(".panel-body").animate({height: "+270px"});
+            registerMode = false;
+            $("#signupBtn").prop("disabled", false);
+            $("#confirmBtn").attr({value: "Login"});
+        });
+        
+  }, 500);
+
+  function showRegisterFields() {
+	$(".register").css("visibility", "visible");
+	$(".register").fadeIn();
+}
+
+function hideRegisterFields() {
+	$(".register").css("visibility", "hidden");
+        $("#confirmBtn").animate({top: "-0px"}, 1);
+        $(".login").animate({top: "-0px"}, 1);
+	//$("#confirmBtn").animate({top: "-195px"}, 400);
+        $("#username").attr("placeholder", "username or email");
+        //$(".login").animate({top: "-146px"}, 400);
+}
+                
+            </script>
+        <script type="text/javascript">
+            if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+                var msViewportStyle = document.createElement("style");
+                var mq = "@@-ms-viewport{width:auto!important}";
+                msViewportStyle.appendChild(document.createTextNode(mq));
+                document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+            }
+        </script>
+    </head>
+    <body>
+        <div id="applicationHost">
+            <div class="splash">
+                <div class="message">
+                    Tablemania
+                </div>
+                <i class="fa fa-spinner fa-spin"></i>
+            </div>
+        </div>
+
+        <script src="lib/require/require.js" data-main="app/main"></script>
+    </body>
+</html>

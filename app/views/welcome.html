@@ -1,0 +1,220 @@
+﻿<section>
+<div class="slide-wrapper">
+	</br>
+   <div id="homepage-feature" class="carousel slide">
+      <ol class="carousel-indicators">
+         <li data-target="#homepage-feature" data-slide-to="0" class="active"></li>
+         <li data-target="#homepage-feature" data-slide-to="1"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+
+          <!-- Wrapper for slides<div class="item active" style="background-image:url(app/img/catan.png)">
+         </div>
+
+         <div class="item" style="background-image:url(app/img/monopoly.png)">
+         </div> -->
+
+                        <div class="item active">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <a href="#catan"><img src="app/img/catan.png" class="img-responsive"></a>
+                                </div>
+                                <div class="col-xs-4">
+                                    <a href="#clue"><img src="app/img/clue.png" class="img-responsive"></a>
+                                </div>
+                                <div class="col-xs-4">
+                                   <a href="#D&D"> <img src="app/img/DnD.png" class="img-responsive"></a>
+                                </div>
+                            </div>
+							</br>
+                            <div class="row">
+                                <div class="col-xs-4">
+                                   <a href="#monopoly"> <img src="app/img/monopoly.png" class="img-responsive"></a>
+                                </div>
+                                <div class="col-xs-4">
+                                    <a href="#munchkin"><img src="app/img/munchkin.png" class="img-responsive"></a>
+                                </div>
+                                <div class="col-xs-4">
+                                   <a href="#organattack"> <img src="app/img/OrganAttack.png" class="img-responsive"></a>
+                                </div>
+                            </div>
+                        </div>
+						
+						<div class="item">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <a href="#cah"><img src="app/img/CAH.png" class="img-responsive"></a>
+                                </div>
+                                <div class="col-xs-4">
+                                    <a href="#battleship"><img src="app/img/Battleship.png" class="img-responsive"></a>
+                                </div>
+                                <div class="col-xs-4">
+                                   <a href="#risk"> <img src="app/img/risk.png" class="img-responsive"></a>
+                                </div>
+                            </div>
+							</br>
+                            <div class="row">
+                                <div class="col-xs-4">
+                                   <a href="#clue"> <img src="app/img/clue.png" class="img-responsive"></a>
+                                </div>
+                                <div class="col-xs-4">
+                                    <a href="#organattack"><img src="app/img/OrganAttack.png" class="img-responsive"></a>
+                                </div>
+                                <div class="col-xs-4">
+                                   <a href="#scrabble"> <img src="app/img/Scrabble.png" class="img-responsive"></a>
+                                </div>
+                            </div>
+                        </div>
+
+      </div>
+      <!-- /.carousel-inner -->
+      <!-- Controls -->
+      <a class="left carousel-control" href="#homepage-feature" data-slide="prev">
+        <span class="fa fa-angle-left"></span>
+      </a>
+      <a class="right carousel-control" href="#homepage-feature" data-slide="next">
+        <span class="fa fa-angle-right"></span>
+      </a>
+   </div>
+   
+   <!-- /#homepage-feature.carousel -->
+   <div class="red">
+
+     <div class="red-content">
+            <div class="panel panel-default">
+                <div class="panel-heading"> <strong class="">Login</strong>
+
+                </div>
+	    <div class="panel-body">
+	        <form class="input2">
+	            <button id="signupBtn" type="button" class="btn btn-success">Sign up!</button>
+	            <input type="text" name="firstName" id="firstName" placeholder="first name" class="register extraInput"></input>
+	            <input type="text" name = "lastName" id="lastName" placeholder="last name" class="register extraInput"></input>
+	            <input type="text" name="email" id="email" placeholder="email address" class="register extraInput"></input>
+	            <input type="text" name="username" id="username" placeholder="username or email" class="login extraInput"></input>
+	            <input type="password" name = "password" id="password" placeholder="password" class="login extraInput"></input>
+	            <input type="password" name = "confirmPassword" id="confirmPassword" placeholder="confirm password" class="register extraInput"></input>
+	            <input style="margin-top:10px" type="button" value="Login" id="confirmBtn" class="btn btn-basic extraInput"></input>
+                <input style="padding:0px" type="button" value="&#xf137; Back to login" id="backToLoginBtn" class="register btn btn-danger extraInput fa-input" ></input>
+	
+	        </form>
+		</div>
+		<div class="panel-footer"><p id="loginFailureNotice"><span class="label label-danger">Login Failed!</span></p></div>
+
+
+     </div>
+
+
+   </div>
+
+</div>	
+	    
+	    <div id="login" style="float:left">
+
+	    </div>
+</section>
+<style>
+.slide-wrapper {
+    position: relative
+}
+
+.red {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.panel-default {
+ opacity: 0.985;
+ margin-top:30px;
+}
+
+panel-heading {
+    border-radius: 15px;
+}
+
+.panel-body {
+ padding-top: 0px;
+ border-radius: 15px;
+}
+.form-group.last {
+ margin-bottom:0px;
+}
+.red-content {
+    width: 100%;
+    height: 300px;
+    background: transparent;
+    color: #000;
+}
+@media (min-width: 768px) { 
+    .carousel-caption {
+        text-align: left;
+        padding-right: 300px;
+    }
+    .red {
+        width: 100px;
+        position: absolute;
+        right: 40px;
+        top: 0;
+        bottom: 0;
+        padding: 20px 0;
+        margin-left: -375px;
+    }
+    .red-content {
+        width: 300px;
+        float: right;
+        height: 100%;
+        color: #000;
+        border: 1px solid transparent;
+        margin-right:20px; /* width of .container gutter */
+        -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+        box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    }
+}
+@media (min-width: 992px) { 
+    .red {
+        width: 100px;
+        margin-left: -485px;
+    }
+}
+@media (min-width: 1200px) { 
+    .red {
+        width: 100px;
+        margin-left: -585px;
+    }
+}
+
+/* MISC */
+#homepage-feature .item {
+    overflow: hidden;
+    height: 90vh;
+    background-color: transparent;
+    background-size: cover;
+}
+#homepage-feature > .carousel-control {
+    width: 60px;
+    font-size: 40px;
+    color: #fff;
+    text-shadow: none;
+    filter: none;
+    opacity: 1;
+}
+#homepage-feature > .carousel-control span {
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+.fa-input {
+  font-family: FontAwesome, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.carousel-inner img2 {
+  margin: auto;
+}
+</style>
+
+

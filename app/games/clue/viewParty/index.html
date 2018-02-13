@@ -1,0 +1,25 @@
+﻿<div>
+    <h1>View Party</h1>
+    <div class="well">
+        <form data-bind="submit: addItem">
+            <label>Enter Code</label>
+            <div class="input-group col-xs-3">
+                <input class="form-control " data-bind='value: itemToAdd, valueUpdate: "afterkeydown", enable: isDisabled' />
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit" data-bind="click: toggle1">Enter</button>
+                </span>
+            </div>
+            <br/>
+			<div data-bind="visible: button1Visible">
+			<label>Your Party Members</label>
+            <div class="input-group col-xs-3">
+                <select class="form-control " multiple="multiple" data-bind="options: allItems, selectedOptions: selectedItems"></select>
+            </div>
+            <br/>
+            <div>
+                <button class="btn btn-default" data-bind="click: sortItems, enable: allItems().length > 1">Sort</button>
+                <button class="btn btn-danger" data-bind="click: removeSelected, enable: selectedItems().length > 0">Remove</button>
+            </div></div>
+        </form>
+    </div>
+</div>
